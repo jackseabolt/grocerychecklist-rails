@@ -1,0 +1,25 @@
+<header role="banner">
+	<h1>Grocery Checklist </h1>
+</header>
+
+<section role="region" class="search-container">
+	<%= form_for @newitem do |i| %> 
+		<%= i.text_field :name, placeholder: 'Add item' %>
+		<%= i.submit "Add", class: 'btn-submit' %> 
+	<% end %> 
+</section>
+
+<section role="region">
+	<p id="counter"><%= @counter %></p>
+</section>
+
+<% @items.each do |i| %>
+<div class="<%= i.checked ? 'complete' : ''%>"> 
+	<p><%= i.name %></p>
+	<i class="fa fa-minus-circle js-button-remove" aria-hidden="true"></i>
+    <i class="fa fa-check-circle js-button-check" aria-hidden="true"></i>
+	<%= link_to "Remove", i, method: :delete, data: { confirm: "Are you sure?"} %> 
+	<%= link_to "Check", checked_path(i) %>
+</div>
+
+<% end %> 

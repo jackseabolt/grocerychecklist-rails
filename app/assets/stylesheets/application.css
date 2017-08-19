@@ -1,0 +1,121 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require font-awesome
+ *= require_self
+ */
+
+body {
+	margin: 0px;
+	padding: 25px 25px 45px 25px;
+}
+h1 {
+	font-family: 'Fjalla One', sans-serif;
+	color: #414449;
+	font-size: 45px;
+	text-align: center;
+	margin-bottom: 45px;
+}
+div { 
+	display: block;
+	padding-left: 0px;
+	color: white;
+	font-family: 'Gloria Hallelujah';
+	font-size: 25px;
+	line-height: 35px;
+	border-radius: 5px;
+	background-color: #9ca4af;
+	border: 0px solid;
+	width: 40%;
+	margin-bottom: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 10px;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-bottom: 30px;
+	text-align: center;
+}
+.btn-submit {
+	background-color: #586596;
+	padding: 8px 15px;
+	color: white;
+	font-size: 14px;
+	border-radius: 5px;
+	border: 1px solid #455077;
+	margin-top: 0px; 
+	cursor: pointer;
+	width: 100px;
+}
+.btn-submit:hover {
+	background-color: #424c72;
+}
+.js-button-remove:hover {
+	color: #ce4a4a;
+}
+#counter {
+	text-align: center;
+	margin-bottom: 50px;
+	font-size: 20px;
+	color: #737982;
+	font-family: 'Fjalla One', sans-serif;
+}
+.js-button-check:hover {
+	color: #e3e5ef;
+}
+.search-container {
+	width: 100%;
+	text-align: center;
+	margin-bottom: 40px;
+}
+.fa-minus-circle {
+	cursor: pointer;
+}
+.fa-check-circle {
+	cursor: pointer;
+}
+ul {
+  padding: 0px;
+}
+input {
+	border-radius: 5px;
+	padding: 8px;
+	font-size: 14px;
+	border: 1px solid #bfbfbf;
+	width: 33%;
+	margin-top: 0px;
+
+}
+section {
+  padding: 0px;
+  margin: 0px;
+}
+
+main {
+  padding: 0px;
+  margin: 0px;
+}
+.complete{
+	background-color: #adc6ad !important;
+}
+
+@media only screen and (max-width: 1100px){
+	li { 
+		width: 60%;
+	}
+}
+@media only screen and (max-width: 800px){
+	li { 
+		width: 80%;
+	}
+}
