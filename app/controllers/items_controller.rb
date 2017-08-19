@@ -50,7 +50,13 @@
 	  	items = Item.all
 	  	total = items.length
 	  	totalChecked = getTotalChecked(items)
-	  	string = totalChecked.to_s + " of " + total.to_s + " COLLECTED"
+	  	if total == 0 
+	  		string = ""
+	  	elsif totalChecked/total == 1
+	  		string = "LIST COMPLETE"
+	  	else 
+	  		string = totalChecked.to_s + " of " + total.to_s + " COLLECTED"
+	  	end 
 	  	return string
 	  end 
 
