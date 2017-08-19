@@ -14,3 +14,19 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+function handleCheckButton(){
+	// set up event listener 
+	$(".js-button-check").click(function(event){
+		console.log("it ran");
+		$(this).closest('div').toggleClass('complete'); 
+	});
+}
+
+
+
+$(document).on('turbolinks:load', function (){
+	handleCheckButton(); 
+}); 
+
+

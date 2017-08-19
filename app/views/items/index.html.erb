@@ -16,10 +16,12 @@
 <% @items.each do |i| %>
 <div class="<%= i.checked ? 'complete' : ''%>"> 
 	<p><%= i.name %></p>
-	<i class="fa fa-minus-circle js-button-remove" aria-hidden="true"></i>
-    <i class="fa fa-check-circle js-button-check" aria-hidden="true"></i>
-	<%= link_to "Remove", i, method: :delete, data: { confirm: "Are you sure?"} %> 
-	<%= link_to "Check", checked_path(i) %>
+	<%= link_to i, method: :delete do %> 
+		<i class="fa fa-minus-circle js-button-remove" aria-hidden="true"></i>
+	<% end %> 
+	<%= link_to checked_path(i) do %>
+  		 <i class="fa fa-check-circle js-button-check" aria-hidden="true"></i>
+	<% end %>	
 </div>
 
 <% end %> 
